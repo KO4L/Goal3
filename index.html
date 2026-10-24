@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Valuation e Margem de Segurança - Cripto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Alavancagem & Valuation</h1>
+        <p class="subtitle">Análise automatizada com dados em tempo real da internet</p>
+
+        <div class="card">
+            <label for="cryptoSelect">Selecione o Ativo:</label>
+            <select id="cryptoSelect">
+                <option value="bitcoin">Bitcoin (BTC)</option>
+                <option value="ethereum">Ethereum (ETH)</option>
+                <option value="solana">Solana (SOL)</option>
+                <option value="bittensor">Bittensor (TAO)</option>
+                <option value="hyperliquid">Hyperliquid (HYPE)</option>
+            </select>
+
+            <button id="fetchBtn" onclick="carregarDadosMercado()">Atualizar Preço da Web</button>
+        </div>
+
+        <div class="card result-box">
+            <h2>Resultados da Análise</h2>
+            <div class="metric"><span>Preço Atual de Mercado:</span> <strong id="precoAtual">Carregando...</strong></div>
+            <div class="metric"><span>Preço Justo Estimado:</span> <strong id="precoJusto">-</strong></div>
+            <div class="metric"><span>Preço Teto (Margem 30%):</span> <strong id="precoTeto">-</strong></div>
+            <div class="metric"><span>Status da Oportunidade:</span> <strong id="statusOportunidade">-</strong></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
